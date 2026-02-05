@@ -33,10 +33,10 @@ const ProjectCard: React.FC<{
 
   return (
     <div
-      className="reveal group flex flex-col space-y-5 md:space-y-6"
+      className="reveal group flex flex-col space-y-4 sm:space-y-5 md:space-y-6"
       style={{ transitionDelay: `${index * 150}ms` }}
     >
-      <div className="relative aspect-[4/5] min-h-[280px] overflow-hidden rounded-sm bg-brand-gray/20">
+      <div className="relative aspect-[4/5] min-h-[250px] sm:min-h-[280px] overflow-hidden rounded-sm bg-brand-gray/20">
         <img
           src={src}
           alt=""
@@ -51,11 +51,11 @@ const ProjectCard: React.FC<{
           </div>
         </div>
       </div>
-      <div className="space-y-2 border-l-2 border-brand-red/30 pl-5 md:pl-6 group-hover:border-brand-red transition-colors duration-500">
-        <span className="text-brand-red text-[10px] font-bold uppercase tracking-[0.35em]">
+      <div className="space-y-2 border-l-2 border-brand-red/30 pl-4 sm:pl-5 md:pl-6 group-hover:border-brand-red transition-colors duration-500">
+        <span className="text-brand-red text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.35em]">
           {category}
         </span>
-        <h3 className="text-xl md:text-2xl font-display font-medium text-white uppercase tracking-tight group-hover:tracking-wider transition-all">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-display font-medium text-white uppercase tracking-tight group-hover:tracking-wider transition-all">
           {title}
         </h3>
       </div>
@@ -67,23 +67,23 @@ const Projects: React.FC = () => {
   const revealRef = useReveal();
 
   return (
-    <section id="projects" className="py-20 md:py-28 lg:py-32 bg-brand-black overflow-hidden" ref={revealRef}>
+    <section id="projects" className="py-16 sm:py-20 md:py-28 lg:py-32 bg-brand-black overflow-hidden" ref={revealRef}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-8 mb-16 md:mb-24 reveal">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16 md:mb-24 reveal">
           <div>
             <span className="text-brand-red font-display text-[10px] md:text-xs uppercase tracking-[0.5em] mb-3 md:mb-4 block">
               The Portfolio
             </span>
-            <h2 className="text-4xl md:text-5xl lg:text-7xl font-display font-bold text-white uppercase tracking-tighter leading-none">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-white uppercase tracking-tighter leading-none">
               Our <br /> <span className="text-brand-red">Work</span>
             </h2>
           </div>
-          <p className="text-white/85 max-w-sm text-sm md:text-base font-light leading-relaxed md:self-center">
+          <p className="text-white/85 max-w-sm text-xs sm:text-sm md:text-base font-light leading-relaxed md:self-center">
             Our projects show what happens when solid workmanship meets clear planning—residential and commercial builds delivered on time.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
           {PROJECTS.map((project, index) => (
             <ProjectCard
               key={index}

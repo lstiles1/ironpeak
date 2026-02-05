@@ -19,9 +19,11 @@ const Logo: React.FC<LogoProps> = ({
       <img
         src="/logo.png"
         alt="IronPeak Construction Group"
-        className={`object-contain object-left transition-transform duration-300 hover:scale-[1.02] ${compact ? 'h-8 md:h-9 max-w-[120px]' : 'h-10 md:h-12 max-w-[180px]'}`}
-        width={compact ? 120 : 180}
-        height={compact ? 32 : 48}
+        className={`object-cover transition-transform duration-300 hover:scale-[1.02] rounded-full ${
+          compact ? 'h-11 md:h-12 w-11 md:w-12' : 'h-14 md:h-16 w-14 md:w-16'
+        }`}
+        width={compact ? 170 : 240}
+        height={compact ? 40 : 56}
       />
       {showTagline && !compact && (
         <span className="sr-only">Construction Group</span>

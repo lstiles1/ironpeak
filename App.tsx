@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import Footer from './components/Footer';
 
 function App() {
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -34,14 +35,14 @@ function App() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a
                 href="tel:(408)555-0198"
-                className="bg-white/10 p-6 md:p-8 backdrop-blur-md border border-white/10 rounded-sm w-full sm:w-auto min-w-[240px] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-red"
+                className="cta-card bg-white/10 p-6 md:p-8 backdrop-blur-md border border-white/10 rounded-sm w-full sm:w-auto min-w-[240px] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-red"
               >
                 <p className="text-white/80 text-[10px] font-bold uppercase tracking-widest mb-2">Direct Line</p>
                 <p className="text-white text-xl md:text-2xl font-bold font-display tracking-tight">(408) 555-0198</p>
               </a>
               <a
                 href="mailto:build@ironpeak.com"
-                className="bg-white/10 p-6 md:p-8 backdrop-blur-md border border-white/10 rounded-sm w-full sm:w-auto min-w-[240px] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-red"
+                className="cta-card bg-white/10 p-6 md:p-8 backdrop-blur-md border border-white/10 rounded-sm w-full sm:w-auto min-w-[240px] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-red"
               >
                 <p className="text-white/80 text-[10px] font-bold uppercase tracking-widest mb-2">Email</p>
                 <p className="text-white text-xl md:text-2xl font-bold font-display tracking-tight break-all">build@ironpeak.com</p>
