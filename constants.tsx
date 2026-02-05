@@ -5,10 +5,10 @@ import { NavItem, Service } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', href: '#' },
-  { label: 'About', href: '#about' },
+  { label: 'About Us', href: '#about' },
   { label: 'Services', href: '#services' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact Us', href: '#contact' },
 ];
 
 export const SERVICES: Service[] = [

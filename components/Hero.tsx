@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(to right, rgba(10,10,10,0.88) 0%, rgba(10,10,10,0.5) 45%, rgba(10,10,10,0.2) 70%, transparent 100%)',
+              'linear-gradient(to right, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.65) 45%, rgba(10,10,10,0.35) 70%, rgba(10,10,10,0.1) 100%)',
           }}
         />
       </div>
@@ -43,13 +43,13 @@ const Hero: React.FC = () => {
             Strength And<br />
             Precision
           </h1>
-          <div className="w-full max-w-md h-[0.5px] bg-white/90 mb-6 md:mb-8" />
+          <div className="w-full max-w-md h-[0.3px] bg-white/90 mb-6 md:mb-8" />
           <p className="text-white/90 text-xs md:text-sm leading-relaxed mb-8 md:mb-10 max-w-md">
             We believe that every business is unique. Our approach is never one size fits all. We tailor our strategies to fit your goals.
           </p>
           <a
             href="#projects"
-            className="inline-flex items-center justify-center gap-2 bg-brand-red text-white px-8 py-4 text-[10px] font-bold uppercase tracking-[0.4em] hover:bg-white hover:text-brand-red transition-colors"
+            className="inline-flex items-center justify-center gap-2 px-6 py-2.5 text-sm font-sans font-medium text-white rounded-sm bg-brand-red transition-opacity hover:opacity-90"
           >
             <span>Service Request</span>
             <ArrowRight className="w-4 h-4" style={{ transform: 'rotate(-45deg)' }} />

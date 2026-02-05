@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
                   className="relative flex items-center gap-1 text-white/90 hover:text-white text-[10px] font-sans font-bold uppercase tracking-[0.35em] transition-all group py-2"
                 >
                   {item.label}
-                  {item.label !== 'Contact' && <ChevronDown className="w-3.5 h-3.5 opacity-80" aria-hidden />}
+                  {item.label !== 'Contact Us' && <ChevronDown className="w-3.5 h-3.5 opacity-80" aria-hidden />}
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-brand-red transition-all group-hover:w-full" />
                 </a>
               ))}
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
           <div className="hidden md:block">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 bg-brand-red text-white px-6 py-3 text-[10px] font-sans font-bold uppercase tracking-[0.35em] hover:bg-white hover:text-brand-red transition-all rounded-sm"
+              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 text-sm font-sans font-medium text-white rounded-sm bg-brand-red transition-opacity hover:opacity-90"
             >
               Get Free Quote
               <ArrowUpRight className="w-4 h-4" />
