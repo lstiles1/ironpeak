@@ -1,61 +1,60 @@
 import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 
-// Construction workers on site
 const HERO_IMAGE =
   'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=2400t';
 const HERO_FALLBACK =
-  'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=2400';
+  'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8c?auto=format&fit=crop&q=80&w=2400';
 
 const Hero: React.FC = () => {
   const [imgError, setImgError] = useState(false);
   const heroImage = imgError ? HERO_FALLBACK : HERO_IMAGE;
 
   return (
-    <section className="relative text-white pt-28 md:pt-36 lg:pt-44 pb-24 md:pb-32 lg:pb-40 overflow-hidden min-h-screen flex items-center">
-      {/* Background Image */}
+    <section className="relative text-white min-h-screen flex items-center overflow-hidden">
+      {/* Full-bleed background image */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt=""
+          alt="Construction workers on site"
           fetchPriority="high"
           loading="eager"
           onError={() => setImgError(true)}
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-brand-black/75" />
+        {/* Gradient overlay: darker on left for text readability (wireframe) */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(to right, rgba(10,10,10,0.88) 0%, rgba(10,10,10,0.5) 45%, rgba(10,10,10,0.2) 70%, transparent 100%)',
+          }}
+        />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-12 lg:gap-16 lg:grid-cols-2 items-center w-full relative z-10">
-        {/* Text column */}
-        <div className="space-y-6 md:space-y-8">
-          <span className="inline-flex items-center px-3 py-1 text-[10px] font-bold uppercase tracking-[0.4em] bg-brand-red/10 text-white border border-brand-red/40 rounded-sm">
+      {/* Content: left-aligned; top padding so hero image is visible above navbar */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 md:pt-40 lg:pt-48 pb-16 md:pb-20 lg:pb-24">
+        <div className="max-w-xl">
+          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-brand-red mb-6 md:mb-8">
             Delivering quality construction
-          </span>
-
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight">
-            Built With
-            <br className="hidden sm:block" />
-            <span className="block text-brand-red">Strength &amp; Precision</span>
-          </h1>
-
-          <p className="text-brand-silver text-sm sm:text-base md:text-lg lg:text-xl max-w-xl leading-relaxed">
-            We believe that every business is unique and our approach is never one size fits all. We tailor our strategies to meet your goals.
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-2">
-            <a
-              href="#projects"
-              className="inline-flex items-center justify-center gap-3 bg-brand-red text-white px-8 sm:px-10 py-3 sm:py-4 text-[10px] font-bold uppercase tracking-[0.4em] shadow-2xl hover:bg-white hover:text-brand-red transition-colors"
-            >
-              <ArrowRight className="w-4 h-4" />
-              <span>Service Request</span>
-            </a>
-          </div>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-bold leading-tight text-white mb-4 md:mb-5">
+            Built With<br />
+            Strength And<br />
+            Precision
+          </h1>
+          <div className="w-full max-w-md h-[0.5px] bg-white/90 mb-6 md:mb-8" />
+          <p className="text-white/90 text-xs md:text-sm leading-relaxed mb-8 md:mb-10 max-w-md">
+            We believe that every business is unique. Our approach is never one size fits all. We tailor our strategies to fit your goals.
+          </p>
+          <a
+            href="#projects"
+            className="inline-flex items-center justify-center gap-2 bg-brand-red text-white px-8 py-4 text-[10px] font-bold uppercase tracking-[0.4em] hover:bg-white hover:text-brand-red transition-colors"
+          >
+            <span>Service Request</span>
+            <ArrowRight className="w-4 h-4" style={{ transform: 'rotate(-45deg)' }} />
+          </a>
         </div>
-
-        {/* Empty column for layout balance */}
-        <div className="hidden lg:block"></div>
       </div>
     </section>
   );
